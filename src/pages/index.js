@@ -190,7 +190,7 @@ export default function Home() {
                 </div>
                 
             </div>
-            <div className={styles.third_container} style={{"background-image":"url('../public/images/Vector-1.png')"}}>
+            <div className={styles.third_container} style={{"background-image":"url('images/Vector-1.png')"}}>
                 <div className="xr_engine_div">
                     <div className="desktop-container row">
                         <div className="col-6 xrengine_logo mobile-container">
@@ -208,7 +208,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={styles.fourth_container} style={{"background-image":"url('../public/images/Vector-2.png')"}}>
+            <div className={styles.fourth_container} style={{"background-image":"url('images/Vector-2.png')"}}>
                 <div className="desktop-container row get_touch_div">
                     <div className="col-4 mt-50 get_touch_txt mobile-container">
                         <p className="desktop_section_title text-left">Get in touch</p>
