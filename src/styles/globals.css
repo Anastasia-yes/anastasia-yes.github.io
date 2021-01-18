@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Inter;
+  background-color: #050012!important;
 }
 
 a {
@@ -226,6 +227,9 @@ p{
 
 /* pad view */
 @media (max-width: 1300px) {
+  .desktop-container{
+    padding: 0 7rem;
+  }
   .contact_rocket{
     width: 130px;
   }
@@ -235,7 +239,7 @@ p{
 }
 @media (max-width: 1024px) {
   .desktop-container{
-    padding: 0 7rem;
+    padding: 0 5rem;
   }
   .devide_line{
     width: 17.8rem;

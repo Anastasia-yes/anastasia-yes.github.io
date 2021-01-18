@@ -10,6 +10,7 @@
 .main {
   padding:0;
   width: 100%;
+  max-width: 2000px;
   height: auto;
   align-items: center;
   background-color: white;
@@ -31,14 +32,14 @@
 }
 .second_container{
   width: 100%;
-  height: 2100px;
+  height: 1935px;
   background: radial-gradient(102.37% 100% at 0% 100%, #160B2E 0%, #050012 100%);
   margin-top: -300px;
   padding: 70px 0;
 }
 .third_container{
   height: 415.5px;
-  margin-top: -158px;
+  margin-top: -170px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -46,7 +47,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 979px;
-  margin-top: -300px;
+  margin-top: -370px;
   padding-top: 350px;
 }
 .footer {
@@ -109,7 +110,7 @@
   margin-bottom: 0;
 }
 .line_30_degree_group{
-  margin-top: 8rem;
+  margin-top: 5rem;
   transform: rotate(-30deg);
 }
 .line_30_degree_group div{
@@ -193,7 +194,7 @@
   margin: 190px auto 0;
 }
 .main_carousel{
-  margin: 300px auto 0;
+  margin: 200px auto 0;
   width: 1000px;
   z-index: 1;
 }
@@ -214,6 +215,11 @@
 }
 
 /* pad view */
+@media (max-width: 1600px) {
+  .first_container{
+    height: 1370px;
+  }
+}
 @media (max-width: 1300px) {
   .first_container{
     background-position: -100px -200px;
@@ -227,7 +233,7 @@
     background-position: -300px -200px;
   }
   .line_30_degree_group{
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .line_top_2{
     margin-left: -10%;
@@ -249,7 +255,7 @@
 /* mobile view */
 @media (max-width: 762px) {
   .first_container{
-    height: 1240px;
+    height: 1140px;
   }
   .big_text{
     font-size: 5rem;
@@ -264,6 +270,7 @@
   }
   .second_container{
     padding: 200px 0;
+    height: 2000px;
   }
   .firstname_input{
     width: 100%!important;

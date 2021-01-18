@@ -5,22 +5,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Carousel from 'react-bootstrap/Carousel' 
 import { useState } from 'react'
 
+import * as gtag from '../lib/gtag'
+
 export default function Home() { 
-    const [modalShown, setShowModal] = useState(false)
+    const [modalShown, setShowModal] = useState(false);
+    const [message, setMessage] = useState("");
 
     const showModal=()=>setShowModal(true);
     const hideModal=()=>setShowModal(false);
+
+    const handleInput = (e) => {
+        console.log(e.target.value);
+        setMessage(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    
+        gtag.event({
+          action: 'submit_form',
+          category: 'Contact',
+          label: message,
+        })
+    
+        setMessage('');
+    }
+
     return (
     <div className={styles.container}>
         <Head>
-            <title>Lander</title>
+            <title>Laguna LABS</title>
             <link rel="icon" href="images/favicon.png" />
             <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'/>
             <link rel="preconnect" href="https://fonts.gstatic.com"/> 
             <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet"/>
         </Head>
-
-
             <div className={modalShown?styles.menu_container:"hidden"}>
                 <div className="row pt-5rem pb-2">
                     <div className="col-10">
@@ -227,10 +246,11 @@ export default function Home() {
                             <input type="text" id="" placeholder="Company"/>
                         </div>
                         <div className="row mt-4">
-                            <textarea type="text" id="" rows="5" placeholder="Describe your Dream"/>
+                            <textarea type="text" id="" rows="5" placeholder="Describe your Dream" 
+                            value={message} onChange={handleInput}/>
                         </div>
                         <div className="row mt-3">
-                            <button className="main_button send_btn">Send</button>
+                            <button className="main_button send_btn" type="button" onClick={handleSubmit}>Send</button>
                         </div>
                     </div>
                 </div>
