@@ -4,3 +4,6 @@
 //   // Use the CDN in production and localhost for development.
 //   assetPrefix: isProd ? 'https://cdn.statically.io/gh/Anastasia-yes/anastasia-yes.github.io/gh-pages/' : '',
 // }
+module.exports = {
+    assetPrefix: "."
+};
